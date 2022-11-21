@@ -15,7 +15,7 @@
 #
 # This is an array of strings, each string a socket address of the form
 # "address:port" with IPv6 address in square brackets.
-rtr-listen = ["<%= @rtr_bind %>:<%= @rtr_port %>"]
+rtr-listen = ["<%= scope['routinator::rtr_bind'] %>:<%= scope['routinator::rtr_port'] %>"]
 
 # Listen addresses for Prometheus HTTP monitoring endpoint.
 #
@@ -25,15 +25,15 @@ rtr-listen = ["<%= @rtr_bind %>:<%= @rtr_port %>"]
 # Port 9556 is allocated for the routinator exporter.
 # https://github.com/prometheus/prometheus/wiki/Default-port-allocations
 #
-http-listen = ["<%= @http_bind %>:<%= @http_port %>"]
+http-listen = ["<%= scope['routinator::http_bind'] %>:<%= scope['routinator::http_port'] %>"]
 
 <% if @facts['os']['name'] != 'FreeBSD' -%>
 repository-dir = "/var/lib/routinator/rpki-cache"
 <% end -%>
 
 <% if @facts['os']['name'] == 'FreeBSD' -%>
-repository-dir = "/var/routinator/repository"
-tal-dir = "/var/routinator/tals"
+repository-dir = "<%= scope['routinator::work_folder'] %>/repository"
+tal-dir = "<%= scope['routinator::work_folder'] %>/tals"
 
 # Log level
 #
@@ -54,5 +54,5 @@ log = "file"
 #
 # The path to the file to log to if file logging is used. If the path is
 # relative, it is relative to the directory this config file lives in.
-log-file = "/var/log/routinator/routinator.log"
+log-file = "<%= scope['routinator::log_folder'] %>/routinator.log"
 <% end -%>

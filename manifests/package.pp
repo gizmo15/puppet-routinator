@@ -7,8 +7,9 @@ class routinator::package {
     name   => $routinator::package_name,
   }
 
-  package { 'routinator_basic_packages':
-    ensure => 'present',
-    name   => $routinator::basic_packages,
+  $routinator::basic_packages.each |$package| {
+    package { $package:
+      ensure => 'present',
+    }
   }
 }

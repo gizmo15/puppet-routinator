@@ -7,3 +7,18 @@ routinator::rtr_bind: '127.0.0.1'
 routinator::rtr_port: 3323
 routinator::http_bind: '127.0.0.1'
 routinator::http_port: 8323
+
+routinator::gpg_key_source: ''
+routinator::repo_file: ''
+routinator::repo_file_source: ''
+routinator::gpg_filename: ''
+routinator::gpg_keyid: ''
+routinator::apt_repo_content: ''
+routinator::apt_repo_path: ''
+
+routinator::log_folder: ''
+routinator::work_folder: ''
+routinator::work_user: ''
+routinator::work_group: ''
+routinator::config_enable: ''
+routinator::config_enable_source: ''
