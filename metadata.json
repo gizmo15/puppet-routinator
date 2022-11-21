@@ -1,0 +1,70 @@
+{
+  "name": "puppet-routinator",
+  "version": "1.0.0",
+  "author": "Boris Tassou",
+  "summary": "Puppet Routinator management module",
+  "license": "MIT",
+  "source": "https://github.com/gizmo15/puppet-routinator.git",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 5.0.0 < 7.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "22.04"
+      ]
+    },
+    {
+      "operatingsystem": "FreeBSD",
+      "operatingsystemrelease": [
+        "13.1"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "DragonFly"
+    },
+    {
+      "operatingsystem": "NetBSD"
+    },
+    {
+      "operatingsystem": "Archlinux"
+    },
+    {
+      "operatingsystem": "VirtuozzoLinux"
+    },
+    {
+      "operatingsystem": "SLES"
+    },
+    {
+      "operatingsystem": "Solaris"
+    },
+    {
+      "operatingsystem": "AIX"
+    },
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "OpenBSD"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 6.21.0 < 8.0.0"
+    }
+  ],
+  "pdk-version": "2.5.0",
+  "template-url": "pdk-default#2.5.0",
+  "template-ref": "tags/2.5.0-0-g369d483"
+}

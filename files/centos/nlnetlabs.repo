@@ -1,0 +1,4 @@
+[nlnetlabs]
+name=NLnet Labs
+baseurl=https://packages.nlnetlabs.nl/linux/centos/$releasever/main/$basearch
+enabled=1

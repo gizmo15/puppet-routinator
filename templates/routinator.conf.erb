@@ -1,0 +1,58 @@
+# Routinator Configuration
+#
+# The configuration file is a TOML file. It consists of a sequence of
+# key-value pairs, each on its own line. Strings are to be enclosed in
+# double quotes. Lists of values can be given by enclosing a
+# comma-separated sequence of these values in square brackets.
+#
+# See https://github.com/toml-lang/toml for detailed information on the
+# format.
+#
+# This file contains all configuration settings with explanations and their
+# default values.
+
+# Listen addresses for RTR TCP transport.
+#
+# This is an array of strings, each string a socket address of the form
+# "address:port" with IPv6 address in square brackets.
+rtr-listen = ["<%= @rtr_bind %>:<%= @rtr_port %>"]
+
+# Listen addresses for Prometheus HTTP monitoring endpoint.
+#
+# This is an array of strings, each string a socket address of the form
+# "address:port" with IPv6 address in square brackets.
+#
+# Port 9556 is allocated for the routinator exporter.
+# https://github.com/prometheus/prometheus/wiki/Default-port-allocations
+#
+http-listen = ["<%= @http_bind %>:<%= @http_port %>"]
+
+<% if @facts['os']['name'] != 'FreeBSD' -%>
+repository-dir = "/var/lib/routinator/rpki-cache"
+<% end -%>
+
+<% if @facts['os']['name'] == 'FreeBSD' -%>
+repository-dir = "/var/routinator/repository"
+tal-dir = "/var/routinator/tals"
+
+# Log level
+#
+# The maximum log level ("off", "error", "warn", "info", or "debug") for
+# which to log messages.
+log-level = "warn"
+
+# Log target
+#
+# Where to log to. One of "stderr" for stderr, "syslog" for syslog, or "file"
+# for a file. If "file" is given, the "log-file" field needs to be given, too.
+#
+# Can also be "default", in which case "syslog" is used in daemon mode and
+# "stderr" otherwise
+log = "file"
+
+# Log file
+#
+# The path to the file to log to if file logging is used. If the path is
+# relative, it is relative to the directory this config file lives in.
+log-file = "/var/log/routinator/routinator.log"
+<% end -%>
