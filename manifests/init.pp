@@ -11,11 +11,11 @@
 # @param http_port
 #   rtr port address
 class routinator (
-  String $rtr_bind     = '127.0.0.1',
-  Integer $rtr_port    = 3323,
-  String $http_bind    = '127.0.0.1',
-  Integer $http_port   = 8323,
-) inherits routinator::params {
+  String $rtr_bind,
+  Integer $rtr_port,
+  String $http_bind,
+  Integer $http_port,
+) {
   contain routinator::package
   contain routinator::config
   contain routinator::service

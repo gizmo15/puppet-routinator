@@ -1,0 +1,8 @@
+---
+routinator::basic_packages: ['ca-certificates', 'curl', 'lsb-release', 'routinator']
+routinator::gpg_filename: 'nlnetlabs-archive-keyring.gpg'
+routinator::gpg_keyid: '210528A3130ABAAEFFC8680494E92A0708C4CC43'
+routinator::gpg_key_source: 'https://packages.nlnetlabs.nl/aptkey.asc'
+routinator::apt_repo_content: "deb [arch=%{facts.os.architecture}] signed-by=/usr/share/keyrings/nlnetlabs-archive-keyring.gpg] https://packages.nlnetlabs.nl/linux/${os_name} %{facts.os.distro.codename]} main\n"
+routinator::apt_repo_path: '/etc/apt/sources.list.d/nlnetlabs.list'
+routinator::config_path: '/etc/routinator/routinator.conf'

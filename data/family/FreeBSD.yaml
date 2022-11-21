@@ -1,0 +1,7 @@
+---
+routinator::basic_packages: []
+routinator::log_folder: '/var/log/routinator'
+routinator::work_user: 'routinator'
+routinator::work_group: 'wheel'
+routinator::work_folder: '/var/routinator'
+routinator::config_enable: '/etc/rc.conf.d/routinator'

@@ -1,1 +1,9 @@
---- {}
+---
+routinator::package_name: 'routinator'
+routinator::service_name: 'routinator'
+routinator::config_source: 'routinator/routinator.conf.erb'
+routinator::os_name: "${{ lower(%{facts.os.name}) }}"
+routinator::rtr_bind: '127.0.0.1'
+routinator::rtr_port: 3323
+routinator::http_bind: '127.0.0.1'
+routinator::http_port: 8323
