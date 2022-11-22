@@ -1,5 +1,4 @@
 ---
-routinator::basic_packages: []
 routinator::repo_file: '/etc/yum.repos.d/nlnetlabs.repo'
 routinator::repo_file_source: 'puppet:///modules/routinator/centos/nlnetlabs.repo'
 routinator::gpg_key_source: 'https://packages.nlnetlabs.nl/aptkey.asc'
