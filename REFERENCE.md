@@ -8,7 +8,7 @@
 * [`routinator`](#routinator): Install and configure routinator
 * [`routinator::config`](#routinatorconfig): Configure routinator installation
 * [`routinator::package`](#routinatorpackage): Manage routinator package installation
-* [`routinator::repo`](#routinatorrepo): A short summary of the purpose of this class
+* [`routinator::repo`](#routinatorrepo): Manage repo for routinator installation
 * [`routinator::service`](#routinatorservice): Handle routinator service
 
 ## Classes
@@ -163,15 +163,7 @@ Manage routinator package installation
 
 ### routinator::repo
 
-A description of what this class does
-
-#### Examples
-
-##### 
-
-```puppet
-include routinator::repo
-```
+Manage repo for routinator installation
 
 ### routinator::service
 

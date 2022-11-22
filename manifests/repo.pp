@@ -1,9 +1,4 @@
-# @summary A short summary of the purpose of this class
-#
-# A description of what this class does
-#
-# @example
-#   include routinator::repo
+# @summary Manage repo for routinator installation
 class routinator::repo {
   assert_private()
 
