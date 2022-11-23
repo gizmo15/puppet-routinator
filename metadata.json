@@ -1,7 +1,7 @@
 {
-  "name": "puppet-routinator",
+  "name": "gizmo15-routinator",
   "version": "1.0.0",
-  "author": "Boris Tassou",
+  "author": "gizmo15",
   "summary": "Puppet Routinator management module",
   "license": "MIT",
   "source": "https://github.com/gizmo15/puppet-routinator.git",
