@@ -109,7 +109,7 @@ configuration file to enable routinator
 
 Data type: `String`
 
-configuration source file to enable routinator
+configuration source file to enable routinator template
 
 ##### `repo_file`
 
@@ -141,11 +141,11 @@ Data type: `String`
 
 gpg key id
 
-##### `apt_repo_content`
+##### `apt_repo_source`
 
 Data type: `String`
 
-apt source file content
+apt source file template
 
 ##### `apt_repo_path`
 

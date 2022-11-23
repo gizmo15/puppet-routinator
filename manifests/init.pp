@@ -31,7 +31,7 @@
 # @param config_enable
 #   configuration file to enable routinator
 # @param config_enable_source
-#   configuration source file to enable routinator
+#   configuration source file to enable routinator template
 # @param repo_file
 #   repository destination file
 # @param repo_file_source
@@ -42,8 +42,8 @@
 #   filename for gpg key
 # @param gpg_keyid
 #   gpg key id
-# @param apt_repo_content
-#   apt source file content
+# @param apt_repo_source
+#   apt source file template
 # @param apt_repo_path
 #   apt source file path
 class routinator (
