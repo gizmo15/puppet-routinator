@@ -14,7 +14,7 @@ routinator::repo_file: ''
 routinator::repo_file_source: ''
 routinator::gpg_filename: ''
 routinator::gpg_keyid: ''
-routinator::apt_repo_content: ''
+routinator::apt_repo_source: ''
 routinator::apt_repo_path: ''
 
 routinator::log_folder: ''

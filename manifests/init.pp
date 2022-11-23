@@ -74,7 +74,7 @@ class routinator (
   # Debian
   String $gpg_filename,
   String $gpg_keyid,
-  String $apt_repo_content,
+  String $apt_repo_source,
   String $apt_repo_path,
 
 ) {

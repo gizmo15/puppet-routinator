@@ -14,7 +14,7 @@ class routinator::repo {
       unless   => 'rpm -q gpg-pubkey --qf \'%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n\' | grep NLnet',
     }
   }
-  if $facts['os']['name'] == /^(Debian|Ubuntu)$/ {
+  if $facts['os']['name'] =~ /^(Debian|Ubuntu)$/ {
     # Debian/Ubuntu
     file { $routinator::gpg_filename:
       ensure => file,
@@ -33,7 +33,7 @@ class routinator::repo {
     file { $routinator::apt_repo_path:
       ensure  => file,
       path    => $routinator::apt_repo_path,
-      content => $routinator::apt_repo_content,
+      content => template($routinator::apt_repo_source),
     }
   }
 }
