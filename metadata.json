@@ -1,6 +1,6 @@
 {
   "name": "gizmo15-routinator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "gizmo15",
   "summary": "Puppet Routinator management module",
   "license": "MIT",

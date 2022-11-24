@@ -33,7 +33,7 @@ class routinator::repo {
     file { $routinator::apt_repo_path:
       ensure  => file,
       path    => $routinator::apt_repo_path,
-      content => template($routinator::apt_repo_source),
+      content => template("${module_name}/${routinator::apt_repo_source}"),
     }
   }
 }

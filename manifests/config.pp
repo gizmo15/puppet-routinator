@@ -20,7 +20,7 @@ class routinator::config {
     file { $routinator::config_enable:
       ensure => file,
       path   => $routinator::config_enable,
-      source => "puppet:///modules/routinator/${routinator::config_enable_source}",
+      source => "puppet:///modules/${module_name}/${routinator::config_enable_source}",
     }
 
     exec { "routinator -c ${routinator::config_path} init --accept-arin-rpa":
@@ -32,7 +32,7 @@ class routinator::config {
   file { 'routinator_config':
     ensure  => file,
     path    => $routinator::config_path,
-    content => template('routinator/routinator.conf.erb'),
+    content => template("${module_name}/routinator.conf.erb"),
     notify  => Service['routinator_service'],
   }
 }
