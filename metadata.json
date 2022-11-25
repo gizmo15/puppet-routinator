@@ -1,6 +1,6 @@
 {
   "name": "gizmo15-routinator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "gizmo15",
   "summary": "Puppet Routinator management module",
   "license": "MIT",
@@ -16,6 +16,12 @@
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "22.04"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "11"
       ]
     },
     {
@@ -50,9 +56,6 @@
     },
     {
       "operatingsystem": "AIX"
-    },
-    {
-      "operatingsystem": "Debian"
     },
     {
       "operatingsystem": "OpenBSD"

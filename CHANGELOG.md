@@ -2,10 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## Release 0.1.0
+## Release 1.0.2
 
-**Features**
+Add Debian 11 support
 
-**Bugfixes**
+## Release 1.0.1
 
-**Known Issues**
+Minor update : use puppet built-in var module_name

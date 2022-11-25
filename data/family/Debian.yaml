@@ -1,5 +1,5 @@
 ---
-routinator::basic_packages: ['ca-certificates', 'curl', 'lsb-release']
+routinator::basic_packages: ['gnupg', 'ca-certificates', 'curl', 'lsb-release']
 routinator::gpg_filename: 'nlnetlabs-archive-keyring.gpg'
 routinator::gpg_keyid: '210528A3130ABAAEFFC8680494E92A0708C4CC43'
 routinator::gpg_key_source: 'https://packages.nlnetlabs.nl/aptkey.asc'

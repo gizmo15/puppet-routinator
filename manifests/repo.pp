@@ -20,13 +20,13 @@ class routinator::repo {
       ensure => file,
       path   => "/tmp/${routinator::gpg_filename}",
       source => $routinator::gpg_key_source,
-      notify => Exec["gpg --dearmor ${routinator::gpg_filename}"],
+      notify => Exec["gpg --dearmor -o /tmp/${routinator::gpg_filename}"],
     }
 
-    exec { "gpg --dearmor ${routinator::gpg_filename}":
+    exec { "gpg --dearmor -o /tmp/${routinator::gpg_filename}":
       provider    => 'shell',
       cwd         => '/usr/share/keyrings/',
-      command     => "gpg --dearmor < /tmp/${routinator::gpg_filename} > ${routinator::gpg_filename}",
+      command     => "gpg --dearmor -o /tmp/${routinator::gpg_filename}",
       refreshonly => true,
     }
 
